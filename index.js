@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
       res.status(500).send('Cannot reach fineract');
       return;
     }
-    res.status(response.statusCode);
+    res.status(response.statusCode).send(`Fineract Status is ${response.statusCode}`);
   })
 });
 
